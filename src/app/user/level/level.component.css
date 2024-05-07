@@ -1,0 +1,147 @@
+
+    
+    /* __________________Doctor Page__________________ */
+    
+    .title{
+    display: flex;
+    justify-content: center;
+    color: #212529;
+    font-size: 2.4em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    
+    
+    
+    }
+    .doctors{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    
+    }
+    .layer-doc{
+        width: 100%;
+        height: 100%;
+        background-color: #0c0c0c;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 40%;
+    
+    }
+    .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: 5px solid #000000;
+    padding-top: 1em;
+    
+    }
+    .cards{
+    padding-top: 150px;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background: url(../../../assets/images/test7.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    
+    }
+    .rowdoc{
+    background-color: rgba(255, 255, 255, 0.786);
+    border: 5px solid #FFFFFF;
+    border-radius:30px ;
+    box-shadow: 6px 6px 6px rgb(0 0 0 / 44%);
+
+    position: relative;
+    padding-bottom: 4em;
+    
+    }
+    
+    
+    .link-level{
+    text-decoration: none;
+    color: #212529;
+    }
+    .link-level :hover{
+    color: #212529;
+    }
+    
+    
+    .card{
+    background-color: #fff;
+    width: auto;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    margin-top: 4em;
+    transition: 0.7s ease;
+    }
+    
+    .card:hover{
+    transform: scale(1.1);
+    
+    }
+    .icon{
+    color: #212529;
+    font-size: 4em;
+    text-align: center;
+    }
+    
+    .info{
+    text-align: center;
+    color: #212529;
+    
+    }
+    .info h3{
+
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+    
+    }
+    
+    @media(max-width:600px){
+    header{
+        padding: 9px 3px;
+        position: absolute;
+    }
+    .btn-logout{
+        padding-left: 0px;
+    
+    }
+    .icon{
+    
+    font-size: 3em;
+    
+    }
+    .title{
+    margin:0;
+    margin-top: 3px;
+    font-size: 1.8em;
+    
+    }
+    .cards{
+    padding-top: 115px;
+    }
+    .card{
+    width: auto;
+    padding-top:0px;
+    margin-top: 0px;
+
+    }
+    .rowdoc{
+    margin-left: 30px;
+    width: 80%;
+    padding-bottom: 0;
+    }
+}

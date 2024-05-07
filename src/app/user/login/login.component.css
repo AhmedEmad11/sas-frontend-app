@@ -1,0 +1,178 @@
+
+/*__________________form__________________*/
+.container{
+  padding-top: 8%;
+  position: relative;
+  width: 100%;
+  
+}
+.form{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background: url(../../../assets/images/test7.jpg) no-repeat;
+    /* background: #E9D8FC; */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background-color: #0c0c0c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 40%;
+
+}
+
+.login-row-form {
+
+  border-radius: 1.875em;
+  background-color: rgba(255, 255, 255, 0.786);
+  box-shadow: 6px 6px 6px rgb(0 0 0 / 44%);
+  position: relative;
+  
+}
+
+
+img {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: block;
+  width: 80%;
+  height: 100%;
+
+}
+
+.btn1 {
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+
+
+}
+
+.btn1:hover {
+  background: white;
+  border: 2px solid;
+  color: black;
+}
+
+.txt_wel {
+  font-weight: 700;
+  padding-left: 2.3em;
+}
+
+.lab_inp {
+  border-radius: 35px;
+
+
+}
+
+.eledit {
+  padding-top: 7.5em;
+  padding-top: 10.5em;
+  padding-bottom: 0;
+  padding-left: 50px;
+}
+
+.erralert{
+  font-weight: 700;
+  color: #000000b0;
+  font-size: 1.2em;
+  border-radius: 1.875em;
+  text-align: center;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+.alert{
+  padding: 0em;
+  margin: 0em;
+  margin-left: 2em;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+form .form-control {
+
+  border: 2px solid rgb(161, 161, 161);
+  box-shadow: none;
+
+}
+
+form .form-control:focus {
+
+  border: 3px solid rgb(161, 161, 161);
+  box-shadow: none;
+
+}
+input::-webkit-input-placeholder { 
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  font-weight: 500;
+}
+@media(max-width:600px) {
+  header {
+      padding: 0px 0px;
+      position: absolute;
+  }
+  .btn-logout{
+    padding-left: 0px;
+
+}
+
+  img {
+      width: 100%;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+
+  }
+
+  .login-row-form {
+      box-shadow: 6px 6px 6px rgb(0 0 0 / 44%);
+  }
+
+  .container {
+      width: 95%;
+
+  }
+
+  .txt_wel {
+      margin-bottom: -22px;
+      margin-top: -54px;
+
+      padding-left: 2.5em;
+  }
+
+  .eledit {
+      padding-top: 48px;
+      padding-left: 7px;
+      width: 341px;
+  }
+  .alert{
+
+    font-size: 0.8em;
+
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+
+
+    padding-top: 15%;
+
+
+}
+
+}

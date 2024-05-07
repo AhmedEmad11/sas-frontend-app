@@ -1,0 +1,182 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+    
+}
+.back-all{
+    width: 100%;
+    min-height: 100vh;
+    background: url(../../../assets/images/test7.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.layer-doc{
+    width: 100%;
+    height: 100%;
+    background-color: #0c0c0c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 40%;
+}
+
+/* video */
+
+.video{
+    width: 64.625em;
+    height:550px;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: block;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;;
+}
+.view-cam{
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 30px;
+    box-shadow: 6px 6px 6px rgb(0 0 0 / 44%);
+    position: relative;
+    margin-top: 5em;
+    padding: 0;
+    height: 640px;
+}
+.vid{
+    width: 100%;
+    height: 595px;
+    align-items: center;
+    display: block;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+    margin: 0;
+}
+.btn-vid{
+    order: none;
+    border-radius: 2em;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+}
+.btn-vid:hover {
+    background: white;
+    border: 3px solid;
+    color: black;
+    scale: none;
+}
+.btn-vid:focus {
+    scale: none;
+    background-color: #4CAF50;
+    border: 1px solid ;
+    box-shadow:none;
+}
+.start-vid{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/* end video */
+
+/* att */
+.col-6{
+    width: 50%;
+}
+.row{
+    padding-bottom: 1em;
+}
+.view-att{
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 30px;
+    box-shadow: 6px 6px 6px rgb(0 0 0 / 44%);
+    position: relative;
+    margin-top: 5em;
+    padding: 0;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    height: 640px;
+    overflow: auto;
+}
+.profile-image{
+    width: 4em;
+    height: 4em;   
+
+    border-radius: 2em;
+}
+
+table .name-td , .id-body{
+    padding-top: 1.5em;
+    font-weight:600;
+    font-size: 1em;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+    width: auto;
+    height: 1em;
+}
+
+  /* Track */
+
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 2px grey;  */
+    border-radius: 0.5em;
+    margin-block: 1.45em;
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;; 
+    border-radius: 5px;
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: white; 
+}
+
+@media (min-width:576px) {
+    .col-6{
+        width: 50%;
+    }
+}
+
+@media(max-width:600px){
+header{
+    padding: 9px 3px;
+    position: absolute;
+}
+.btn-logout{
+    padding-left: 0px;
+
+}
+
+
+} 
+@media only screen and (max-width: 768px) {
+
+    .col-6{
+    width: 100%;
+    }
+    .view-att{
+        margin-top: 6em;
+        padding-top: 2em;
+
+    }
+    ::-webkit-scrollbar-track {
+        margin-block: 2em;
+    }
+
+}

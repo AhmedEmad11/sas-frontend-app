@@ -1,0 +1,82 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <ng-container *ngIf="student || doctor">
+
+        <section class="cards">
+            <div class="layer-doc">
+    
+            </div>
+            <div class="container-fluid">
+                <div class="row  rowdoc">
+                    <h2 class="title">Subjects</h2>
+                    <div class="content" >
+                        <a [routerLink]="['/attendance', levelId,subject.id]" *ngFor="let subject of subjects; let i=index" class="link-level col-md-3" >
+                            <div class="card ">
+                                <div class="icon" >
+
+                                    <i [ngClass]="icon[i]"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>{{subject.name}}</h3>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </ng-container>
+    
+
+    <ng-container *ngIf="admin">
+
+        <section class="cards">
+            <div class="layer-doc">
+    
+            </div>
+            <div class="container-fluid">
+                <div class="row rowdoca">
+                    <h2 class="title">Subjects</h2>
+                    <div class="content" >
+                    
+                            <a  [routerLink]="['/stream', levelId, subject.id]" *ngFor="let subject of subjects; let i=index" class="link-level col-md-3" >
+                                <div class="card ">
+                                    <div class="icon" >
+
+                                        <i [ngClass]="icon[i]"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h3>{{subject.name}}</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        
+                    
+                    </div>
+                    <ng-container>
+                        <button *ngIf="!done" type="button" class="btn btn-secondary" (click)="createAttendanceForLevel()">
+                            Create Attendance Object
+                        </button>
+                        <button *ngIf="done" type="button" class="btn btn-secondary">
+                            Done!
+                        </button>
+                    </ng-container>
+                    
+                    
+                </div>
+            </div>
+            
+
+    
+        </section>
+
+    </ng-container>
+
+</body>

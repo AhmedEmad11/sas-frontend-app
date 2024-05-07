@@ -1,0 +1,35 @@
+<head>
+    
+
+    
+</head>
+<body>
+    <ng-container>
+
+        <section class="cards">
+            <div class="layer-doc">
+    
+            </div>
+            <div class="container-fluid">
+                <div class="row rowdoc ">
+
+                    <h2 class="title">Levels</h2>
+                    <div class="content">
+                        <a [routerLink]="['/subject', level.id]" class="link-level col-md-3" *ngFor="let level of levels; let i=index">
+                            <div class="card ">
+                                <div class="icon"> 
+                                    <i [ngClass]="icon[i]"></i>
+                                </div>
+                                <div class="info">
+                                    <h3>{{level.name}}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </ng-container>
+    
+</body>

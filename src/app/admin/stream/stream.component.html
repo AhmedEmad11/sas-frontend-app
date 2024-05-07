@@ -1,0 +1,44 @@
+<body>
+<ng-container>
+  <section  class="back-all">
+    <div class="layer-doc">
+
+    </div>
+  <div class="container">
+    <div class="row gap-5">
+      <div class="col-6  view-att">
+        <table class="table table-dark table-striped">
+          <thead>
+              <tr>
+              <th scope="col" class="id-th">ID</th>
+              <th scope="col" class="image-th">image</th>
+              <th scope="col" class="name-th">Name</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let s of students; let i=index" class="table-success">
+                <ng-container *ngIf="logged.includes(s.id)">
+                  <th scope="row" class="id-body">{{s.id}}</th>
+                  <td class="img-td">
+                      <img class="profile-image" src="../../../assets/labeled_images/{{s.id}}/profile.png" alt="Profile Image">
+                  </td>
+                  <td colspan="2" class="name-td">{{s.first_name}} {{s.last_name}} </td>
+                </ng-container>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+      <div class="col view-cam">
+        <div id="camera">
+          <video width="1" height="1" class="vid" id="video" muted controls autoplay ></video>
+          <div class="start-vid">
+            <button button id="restart" *ngIf="loaded && !recording" (click)="startRec()" type="submit" class="btn btn-vid mode">Start Recognition</button>
+            <button button id="restart" *ngIf="recording" (click)="stopRec()" type="submit" class="btn btn-vid mode">Stop Recognition</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</ng-container>
+</body>

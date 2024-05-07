@@ -1,0 +1,464 @@
+
+/* Student */
+
+.card-att{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background: url(../../../assets/images/test7.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.layer-stu{
+    width: 100%;
+    height: 100%;
+    background-color: #0c0c0c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 40%;
+    
+}   
+.sturow{
+    width: auto;
+    height: auto;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+.stucard{
+    width: 450px;
+    height: 530px;
+    margin-top: 200px;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.786);
+    box-shadow: 6px 6px 6px rgb(0 0 0 / 44%);
+
+}
+.img-name{
+    width: 100%;
+    height: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -75px;
+}
+.img-name img{
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 70px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(148, 148, 148);
+}
+
+.nameofstu{
+    text-transform: uppercase;
+    color: #DC3545;
+    font-weight: bold;
+    font-size:  max(1.7em, 1.7em);
+    border-bottom: 5px solid #212529;
+
+}
+.data-row{
+
+    padding-top: 2em;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    padding-bottom:0.4em;
+}
+.img-name h2{
+    text-align: center;
+    padding: 16px;
+
+}
+.info{
+    height: 140px;
+    padding-top: 50px;
+
+}
+.info h3{
+    text-align: center;
+}
+/* bar for student  */
+
+@keyframes progress{
+    0% { --percentage: 0; }
+    100% { --percentage: var(--value); }
+}
+@property --percentage {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+    
+}
+
+[role="progressbarstu"] {
+    --percentage: var(--value);
+    --primary: #DC3545;
+    --secondary:#212529;
+    --size: 200px;
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    
+}
+
+[role="progressbarstu"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+    mask: radial-gradient(white 55%, transparent 0);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(#0000 55%, #000 0);
+    -webkit-mask-mode: alpha;
+}
+
+[role="progressbarstu"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--primary);
+}
+.bar-att-row{
+    margin-top: 1.2em;
+}
+
+/* end Student */
+
+
+
+/* Doctor */
+
+.sec-doc{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background: url(../../../assets/images/test7.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 80px;
+}
+.layer-att-doc{
+    width: 100%;
+    height: 100%;
+    background-color: #0c0c0c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 40%;
+    
+}
+
+.card-cont{
+    border-radius: 60px;
+}
+.card-body{ 
+    border-radius: 20px;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.786);
+    box-shadow: 6px 6px 6px rgb(0 0 0 / 44%);
+    border: 5px solid #FFFFFF;
+    height: 640px;
+    overflow: auto;
+}
+.searchInput {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+    margin: 20px 0px;
+    padding: 0px 4px;
+}
+.searchInput input {
+    border: 1px solid #e5e5e5;
+    border-radius: 50px;
+    margin-left: 8px;
+    height: 34px;
+    width: 100%;
+    padding: 0px 25px 0px 10px;
+    transition: all .6s ease;
+}
+.searchInput label {
+    color: #767676;
+    font-weight: normal;
+}
+.searchInput input:placeholder-shown {
+    width: 13%;
+}
+.searchInput:hover input:placeholder-shown {
+    width: 50%;
+    cursor: pointer;
+    box-shadow:none;
+    border: 2px solid rgb(161, 161, 161);
+}
+.searchInput:after {
+    font-family: 'FontAwesome';
+    color: #d4d4d4;
+    position: relative;
+    content: "\f002";
+    right: 25px;
+}
+.add_flex{
+    display: flex;
+    justify-content: flex-end;
+    padding-right:0px;
+}
+
+.main-datatable .dataTable.no-footer {
+    border-bottom: 1px solid #eee;
+}
+.main-datatable thead {
+    background-color: #f9f9f9;
+}
+.main-datatable thead>tr>th {
+    border-bottom-width: 0;
+    color: #443f3f;
+    font-weight: 600;
+    padding: 16px 15px;
+    vertical-align: middle;
+    padding-left: 18px;
+    text-align: center;
+}
+.main-datatable tbody td {
+    padding: 10px 15px 10px 18px;
+    color: #333232;
+    font-size: 13px;
+    font-weight: 500;
+    word-break: break-word;
+    border-color: #eee;
+    text-align: center;
+    vertical-align: middle;
+}
+.main-datatable tbody tr {
+    border-top: none;
+}
+.main-datatable .table > tbody > tr:nth-child(even) {
+    background: #f9f9f9;
+}
+.mode{
+    padding:4px 10px;
+    line-height: 13px;
+    color:#fff;
+    font-weight: 400;
+    border-radius: 1rem;
+    font-size:11px;
+    letter-spacing: 0.4px;
+}
+.mode_done{
+    background-color: #03a9f3;
+}
+
+.btn-primary{
+    border: none;
+    color: white;
+    border-radius: 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    padding: 8px 8px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.7s ease;
+    
+}
+.btn-danger{
+    border: none;
+    border-radius: 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    padding: 8px 8px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    transform: scale(1.1);
+
+}
+.btn-primary:focus{
+    background-color: #4CAF50;
+    border: 1px solid #4CAF50;
+    box-shadow:none;
+}
+::-webkit-scrollbar {
+    width: auto;
+    height: 1em;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 2px grey;  */
+    border-radius: 0.5em;
+    margin-bottom: 1.45em;
+    margin-top: 6em;
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;; 
+    border-radius: 5px;
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 0, 0); 
+}
+
+/* Bar Chart */
+.bar-cont{
+    border-radius: 20px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.786);
+    box-shadow: 6px 6px 6px rgb(0 0 0 / 44%);
+    border: 5px solid #FFFFFF;
+    height: 640px;
+
+}
+.con-row{
+    padding-top: 4.8em;
+
+}
+.progress{
+    height: 20px;
+    background: #000000;
+    border-radius: 20px;
+    border: 1px solid #000;
+    box-shadow: 0 2px 2px #4f4c4c;
+    margin-bottom: 30px;
+    overflow: visible;
+    position: relative;
+    width: auto;
+}
+.progress-title{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+}
+.progress-title h3{
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    margin: 0 0 20px;
+}
+.progress-bar{
+    border-radius: 20px;
+    border: 1px solid #000 ;    
+    animation: animate-positive 2s;
+
+}
+.progress-bar span{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+}
+@-webkit-keyframes animate-positive{
+    0%{
+        width: 0;
+    }
+}
+@keyframes animate-positive{
+    0%{
+        width: 0;
+    }
+}
+/* end Bar Chart */
+
+@media(max-width:600px){
+    header{
+        padding: 9px 3px;;
+        position: absolute;
+        
+    }
+    .btn-logout{
+        padding-left: 0px;
+    
+    }
+    .main-datatable {
+
+        margin-top: 2em;
+    }
+    .searchInput {
+        padding-top: 2px;
+        margin: 7px 0px;
+        margin-bottom: 25px;
+        width: 100%;
+        
+    }
+    
+    .btn-primary{
+    padding: 0px 0px;
+    margin: 0px;
+    border-radius: 10px;
+    font-size: 0px;
+    }
+    .fa-circle-plus{
+        font-size: 10px;
+        padding-left: 1.1em;
+        align-items: center;
+        text-align: center;
+        margin-top: 0.5em;
+    }
+    
+    .main-datatable thead>tr>th {
+        font-weight: 600;
+        padding: 10px 10px;
+
+    }
+    .main-datatable tbody td {
+        padding: 10px 10px 10px 10px;
+        font-size: 8px;
+        font-weight: 700;
+        height: 40px;
+        
+    }
+    /* Student */
+    .nameofstu{
+        font-size:  1.2em;
+    
+    }
+        /* bar */
+    .bar-cont{
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 768px){
+    .col-4{
+        width: 100%;
+    
+        margin-top: auto;
+    }
+    .bar-cont{
+        margin: auto;
+        margin-top: 115px;
+    
+    }
+}
